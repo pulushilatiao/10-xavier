@@ -1,0 +1,259 @@
+&&&& RUNNING TensorRT.trtexec [TensorRT v8502] # /usr/src/tensorrt/bin/trtexec --loadEngine=1012_int8.engine --dumpLayerInfo --profilingVerbosity=detailed --exportLayerInfo=1012_int8_layers.json --buildOnly
+[10/12/2026-13:49:48] [I] === Model Options ===
+[10/12/2026-13:49:48] [I] Format: *
+[10/12/2026-13:49:48] [I] Model: 
+[10/12/2026-13:49:48] [I] Output:
+[10/12/2026-13:49:48] [I] === Build Options ===
+[10/12/2026-13:49:48] [I] Max batch: 1
+[10/12/2026-13:49:48] [I] Memory Pools: workspace: default, dlaSRAM: default, dlaLocalDRAM: default, dlaGlobalDRAM: default
+[10/12/2026-13:49:48] [I] minTiming: 1
+[10/12/2026-13:49:48] [I] avgTiming: 8
+[10/12/2026-13:49:48] [I] Precision: FP32
+[10/12/2026-13:49:48] [I] LayerPrecisions: 
+[10/12/2026-13:49:48] [I] Calibration: 
+[10/12/2026-13:49:48] [I] Refit: Disabled
+[10/12/2026-13:49:48] [I] Sparsity: Disabled
+[10/12/2026-13:49:48] [I] Safe mode: Disabled
+[10/12/2026-13:49:48] [I] DirectIO mode: Disabled
+[10/12/2026-13:49:48] [I] Restricted mode: Disabled
+[10/12/2026-13:49:48] [I] Build only: Enabled
+[10/12/2026-13:49:48] [I] Save engine: 
+[10/12/2026-13:49:48] [I] Load engine: 1012_int8.engine
+[10/12/2026-13:49:48] [I] Profiling verbosity: 2
+[10/12/2026-13:49:48] [I] Tactic sources: Using default tactic sources
+[10/12/2026-13:49:48] [I] timingCacheMode: local
+[10/12/2026-13:49:48] [I] timingCacheFile: 
+[10/12/2026-13:49:48] [I] Heuristic: Disabled
+[10/12/2026-13:49:48] [I] Preview Features: Use default preview flags.
+[10/12/2026-13:49:48] [I] Input(s)s format: fp32:CHW
+[10/12/2026-13:49:48] [I] Output(s)s format: fp32:CHW
+[10/12/2026-13:49:48] [I] Input build shapes: model
+[10/12/2026-13:49:48] [I] Input calibration shapes: model
+[10/12/2026-13:49:48] [I] === System Options ===
+[10/12/2026-13:49:48] [I] Device: 0
+[10/12/2026-13:49:48] [I] DLACore: 
+[10/12/2026-13:49:48] [I] Plugins:
+[10/12/2026-13:49:48] [I] === Inference Options ===
+[10/12/2026-13:49:48] [I] Batch: 1
+[10/12/2026-13:49:48] [I] Input inference shapes: model
+[10/12/2026-13:49:48] [I] Iterations: 10
+[10/12/2026-13:49:48] [I] Duration: 3s (+ 200ms warm up)
+[10/12/2026-13:49:48] [I] Sleep time: 0ms
+[10/12/2026-13:49:48] [I] Idle time: 0ms
+[10/12/2026-13:49:48] [I] Streams: 1
+[10/12/2026-13:49:48] [I] ExposeDMA: Disabled
+[10/12/2026-13:49:48] [I] Data transfers: Enabled
+[10/12/2026-13:49:48] [I] Spin-wait: Disabled
+[10/12/2026-13:49:48] [I] Multithreading: Disabled
+[10/12/2026-13:49:48] [I] CUDA Graph: Disabled
+[10/12/2026-13:49:48] [I] Separate profiling: Disabled
+[10/12/2026-13:49:48] [I] Time Deserialize: Disabled
+[10/12/2026-13:49:48] [I] Time Refit: Disabled
+[10/12/2026-13:49:48] [I] NVTX verbosity: 2
+[10/12/2026-13:49:48] [I] Persistent Cache Ratio: 0
+[10/12/2026-13:49:48] [I] Inputs:
+[10/12/2026-13:49:48] [I] === Reporting Options ===
+[10/12/2026-13:49:48] [I] Verbose: Disabled
+[10/12/2026-13:49:48] [I] Averages: 10 inferences
+[10/12/2026-13:49:48] [I] Percentiles: 90,95,99
+[10/12/2026-13:49:48] [I] Dump refittable layers:Disabled
+[10/12/2026-13:49:48] [I] Dump output: Disabled
+[10/12/2026-13:49:48] [I] Profile: Disabled
+[10/12/2026-13:49:48] [I] Export timing to JSON file: 
+[10/12/2026-13:49:48] [I] Export output to JSON file: 
+[10/12/2026-13:49:48] [I] Export profile to JSON file: 
+[10/12/2026-13:49:48] [I] 
+[10/12/2026-13:49:48] [I] === Device Information ===
+[10/12/2026-13:49:48] [I] Selected Device: Xavier
+[10/12/2026-13:49:48] [I] Compute Capability: 7.2
+[10/12/2026-13:49:48] [I] SMs: 6
+[10/12/2026-13:49:48] [I] Compute Clock Rate: 1.109 GHz
+[10/12/2026-13:49:48] [I] Device Global Memory: 6833 MiB
+[10/12/2026-13:49:48] [I] Shared Memory per SM: 96 KiB
+[10/12/2026-13:49:48] [I] Memory Bus Width: 256 bits (ECC disabled)
+[10/12/2026-13:49:48] [I] Memory Clock Rate: 1.109 GHz
+[10/12/2026-13:49:48] [I] 
+[10/12/2026-13:49:48] [I] TensorRT version: 8.5.2
+[10/12/2026-13:49:48] [I] Engine loaded in 0.0145276 sec.
+[10/12/2026-13:49:50] [I] [TRT] Loaded engine size: 5 MiB
+[10/12/2026-13:49:53] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +343, GPU +346, now: CPU 593, GPU 4448 (MiB)
+[10/12/2026-13:49:53] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +4, now: CPU 0, GPU 4 (MiB)
+[10/12/2026-13:49:53] [I] Engine deserialized in 4.33205 sec.
+[10/12/2026-13:49:53] [I] Layer Information:
+[10/12/2026-13:49:53] [I] [TRT] The profiling verbosity was set to ProfilingVerbosity::kLAYER_NAMES_ONLY when the engine was built, so only the layer names will be returned. Rebuild the engine with ProfilingVerbosity::kDETAILED to get more verbose layer information.
+[10/12/2026-13:49:53] [I] Layers:
+Reformatting CopyNode for Input Tensor 0 to /model.0/conv/Conv + PWN(PWN(/model.0/act/Sigmoid), /model.0/act/Mul)
+/model.0/conv/Conv + PWN(PWN(/model.0/act/Sigmoid), /model.0/act/Mul)
+/model.1/conv/Conv + PWN(PWN(/model.1/act/Sigmoid), /model.1/act/Mul)
+/model.2/cv1/conv/Conv + PWN(PWN(/model.2/cv1/act/Sigmoid), /model.2/cv1/act/Mul)
+/model.2/m.0/cv1/conv/Conv
+PWN(PWN(/model.2/m.0/cv1/act/Sigmoid), /model.2/m.0/cv1/act/Mul)
+Reformatting CopyNode for Input Tensor 0 to /model.2/m.0/cv2/conv/Conv
+/model.2/m.0/cv2/conv/Conv
+Reformatting CopyNode for Input Tensor 0 to PWN(PWN(PWN(/model.2/m.0/cv2/act/Sigmoid), /model.2/m.0/cv2/act/Mul), /model.2/m.0/Add)
+Reformatting CopyNode for Input Tensor 1 to PWN(PWN(PWN(/model.2/m.0/cv2/act/Sigmoid), /model.2/m.0/cv2/act/Mul), /model.2/m.0/Add)
+PWN(PWN(PWN(/model.2/m.0/cv2/act/Sigmoid), /model.2/m.0/cv2/act/Mul), /model.2/m.0/Add)
+Reformatting CopyNode for Output Tensor 0 to PWN(PWN(PWN(/model.2/m.0/cv2/act/Sigmoid), /model.2/m.0/cv2/act/Mul), /model.2/m.0/Add)
+/model.2/Split_output_0 copy
+/model.2/Split_output_1 copy
+/model.2/cv2/conv/Conv + PWN(PWN(/model.2/cv2/act/Sigmoid), /model.2/cv2/act/Mul)
+Reformatting CopyNode for Input Tensor 0 to /model.3/conv/Conv + PWN(PWN(/model.3/act/Sigmoid), /model.3/act/Mul)
+/model.3/conv/Conv + PWN(PWN(/model.3/act/Sigmoid), /model.3/act/Mul)
+/model.4/cv1/conv/Conv + PWN(PWN(/model.4/cv1/act/Sigmoid), /model.4/cv1/act/Mul)
+Reformatting CopyNode for Output Tensor 0 to /model.4/cv1/conv/Conv + PWN(PWN(/model.4/cv1/act/Sigmoid), /model.4/cv1/act/Mul)
+Reformatting CopyNode for Input Tensor 0 to /model.4/m.0/cv1/conv/Conv + PWN(PWN(/model.4/m.0/cv1/act/Sigmoid), /model.4/m.0/cv1/act/Mul)
+/model.4/m.0/cv1/conv/Conv + PWN(PWN(/model.4/m.0/cv1/act/Sigmoid), /model.4/m.0/cv1/act/Mul)
+/model.4/m.0/cv2/conv/Conv
+PWN(PWN(PWN(/model.4/m.0/cv2/act/Sigmoid), /model.4/m.0/cv2/act/Mul), /model.4/m.0/Add)
+/model.4/m.1/cv1/conv/Conv + PWN(PWN(/model.4/m.1/cv1/act/Sigmoid), /model.4/m.1/cv1/act/Mul)
+/model.4/m.1/cv2/conv/Conv
+PWN(PWN(PWN(/model.4/m.1/cv2/act/Sigmoid), /model.4/m.1/cv2/act/Mul), /model.4/m.1/Add)
+/model.4/Split_output_0 copy
+/model.4/Split_output_1 copy
+/model.4/m.0/Add_output_0 copy
+/model.4/cv2/conv/Conv + PWN(PWN(/model.4/cv2/act/Sigmoid), /model.4/cv2/act/Mul)
+/model.5/conv/Conv + PWN(PWN(/model.5/act/Sigmoid), /model.5/act/Mul)
+/model.6/cv1/conv/Conv + PWN(PWN(/model.6/cv1/act/Sigmoid), /model.6/cv1/act/Mul)
+Reformatting CopyNode for Input Tensor 0 to /model.6/m.0/cv1/conv/Conv + PWN(PWN(/model.6/m.0/cv1/act/Sigmoid), /model.6/m.0/cv1/act/Mul)
+/model.6/m.0/cv1/conv/Conv + PWN(PWN(/model.6/m.0/cv1/act/Sigmoid), /model.6/m.0/cv1/act/Mul)
+/model.6/m.0/cv2/conv/Conv
+PWN(PWN(PWN(/model.6/m.0/cv2/act/Sigmoid), /model.6/m.0/cv2/act/Mul), /model.6/m.0/Add)
+/model.6/m.1/cv1/conv/Conv + PWN(PWN(/model.6/m.1/cv1/act/Sigmoid), /model.6/m.1/cv1/act/Mul)
+/model.6/m.1/cv2/conv/Conv
+PWN(PWN(PWN(/model.6/m.1/cv2/act/Sigmoid), /model.6/m.1/cv2/act/Mul), /model.6/m.1/Add)
+/model.6/Split_output_0 copy
+/model.6/Split_output_1 copy
+/model.6/m.0/Add_output_0 copy
+/model.6/cv2/conv/Conv + PWN(PWN(/model.6/cv2/act/Sigmoid), /model.6/cv2/act/Mul)
+/model.7/conv/Conv + PWN(PWN(/model.7/act/Sigmoid), /model.7/act/Mul)
+/model.8/cv1/conv/Conv
+PWN(PWN(/model.8/cv1/act/Sigmoid), /model.8/cv1/act/Mul)
+Reformatting CopyNode for Output Tensor 0 to PWN(PWN(/model.8/cv1/act/Sigmoid), /model.8/cv1/act/Mul)
+/model.8/m.0/cv1/conv/Conv + PWN(PWN(/model.8/m.0/cv1/act/Sigmoid), /model.8/m.0/cv1/act/Mul)
+/model.8/m.0/cv2/conv/Conv
+PWN(PWN(PWN(/model.8/m.0/cv2/act/Sigmoid), /model.8/m.0/cv2/act/Mul), /model.8/m.0/Add)
+/model.8/Split_output_0 copy
+/model.8/Split_output_1 copy
+/model.8/cv2/conv/Conv
+PWN(PWN(/model.8/cv2/act/Sigmoid), /model.8/cv2/act/Mul)
+Reformatting CopyNode for Input Tensor 0 to /model.9/cv1/conv/Conv
+/model.9/cv1/conv/Conv
+PWN(PWN(/model.9/cv1/act/Sigmoid), /model.9/cv1/act/Mul)
+/model.9/m/MaxPool
+/model.9/m_1/MaxPool
+/model.9/m_2/MaxPool
+/model.9/cv1/act/Mul_output_0 copy
+/model.9/m/MaxPool_output_0 copy
+/model.9/m_1/MaxPool_output_0 copy
+/model.9/cv2/conv/Conv
+Reformatting CopyNode for Input Tensor 0 to PWN(PWN(/model.9/cv2/act/Sigmoid), /model.9/cv2/act/Mul)
+PWN(PWN(/model.9/cv2/act/Sigmoid), /model.9/cv2/act/Mul)
+Reformatting CopyNode for Output Tensor 0 to PWN(PWN(/model.9/cv2/act/Sigmoid), /model.9/cv2/act/Mul)
+/model.10/Resize
+/model.10/Resize_output_0 copy
+/model.6/cv2/act/Mul_output_0 copy
+/model.12/cv1/conv/Conv + PWN(PWN(/model.12/cv1/act/Sigmoid), /model.12/cv1/act/Mul)
+/model.12/m.0/cv1/conv/Conv + PWN(PWN(/model.12/m.0/cv1/act/Sigmoid), /model.12/m.0/cv1/act/Mul)
+/model.12/m.0/cv2/conv/Conv + PWN(PWN(/model.12/m.0/cv2/act/Sigmoid), /model.12/m.0/cv2/act/Mul)
+Reformatting CopyNode for Output Tensor 0 to /model.12/m.0/cv2/conv/Conv + PWN(PWN(/model.12/m.0/cv2/act/Sigmoid), /model.12/m.0/cv2/act/Mul)
+/model.12/Split_output_0 copy
+/model.12/Split_output_1 copy
+/model.12/cv2/conv/Conv + PWN(PWN(/model.12/cv2/act/Sigmoid), /model.12/cv2/act/Mul)
+Reformatting CopyNode for Output Tensor 0 to /model.12/cv2/conv/Conv + PWN(PWN(/model.12/cv2/act/Sigmoid), /model.12/cv2/act/Mul)
+/model.13/Resize
+/model.13/Resize_output_0 copy
+/model.4/cv2/act/Mul_output_0 copy
+/model.15/cv1/conv/Conv + PWN(PWN(/model.15/cv1/act/Sigmoid), /model.15/cv1/act/Mul)
+Reformatting CopyNode for Input Tensor 0 to /model.15/m.0/cv1/conv/Conv + PWN(PWN(/model.15/m.0/cv1/act/Sigmoid), /model.15/m.0/cv1/act/Mul)
+/model.15/m.0/cv1/conv/Conv + PWN(PWN(/model.15/m.0/cv1/act/Sigmoid), /model.15/m.0/cv1/act/Mul)
+/model.15/m.0/cv2/conv/Conv + PWN(PWN(/model.15/m.0/cv2/act/Sigmoid), /model.15/m.0/cv2/act/Mul)
+/model.15/Split_output_0 copy
+/model.15/Split_output_1 copy
+/model.15/cv2/conv/Conv + PWN(PWN(/model.15/cv2/act/Sigmoid), /model.15/cv2/act/Mul)
+/model.16/conv/Conv + PWN(PWN(/model.16/act/Sigmoid), /model.16/act/Mul)
+Reformatting CopyNode for Output Tensor 0 to /model.16/conv/Conv + PWN(PWN(/model.16/act/Sigmoid), /model.16/act/Mul)
+/model.22/cv2.0/cv2.0.0/conv/Conv || /model.22/cv3.0/cv3.0.0/conv/Conv
+Reformatting CopyNode for Input Tensor 0 to PWN(PWN(/model.22/cv2.0/cv2.0.0/act/Sigmoid), /model.22/cv2.0/cv2.0.0/act/Mul)
+PWN(PWN(/model.22/cv2.0/cv2.0.0/act/Sigmoid), /model.22/cv2.0/cv2.0.0/act/Mul)
+Reformatting CopyNode for Input Tensor 0 to PWN(PWN(/model.22/cv3.0/cv3.0.0/act/Sigmoid), /model.22/cv3.0/cv3.0.0/act/Mul)
+PWN(PWN(/model.22/cv3.0/cv3.0.0/act/Sigmoid), /model.22/cv3.0/cv3.0.0/act/Mul)
+/model.12/cv2/act/Mul_output_0 copy
+/model.22/cv2.0/cv2.0.1/conv/Conv + PWN(PWN(/model.22/cv2.0/cv2.0.1/act/Sigmoid), /model.22/cv2.0/cv2.0.1/act/Mul)
+/model.22/cv3.0/cv3.0.1/conv/Conv + PWN(PWN(/model.22/cv3.0/cv3.0.1/act/Sigmoid), /model.22/cv3.0/cv3.0.1/act/Mul)
+/model.18/cv1/conv/Conv + PWN(PWN(/model.18/cv1/act/Sigmoid), /model.18/cv1/act/Mul)
+Reformatting CopyNode for Input Tensor 0 to /model.22/cv2.0/cv2.0.2/Conv
+/model.22/cv2.0/cv2.0.2/Conv
+Reformatting CopyNode for Input Tensor 0 to /model.22/cv3.0/cv3.0.2/Conv
+/model.22/cv3.0/cv3.0.2/Conv
+/model.22/Reshape
+/model.22/Reshape_copy_output
+/model.22/Reshape_3
+/model.22/Reshape_3_copy_output
+/model.18/m.0/cv1/conv/Conv + PWN(PWN(/model.18/m.0/cv1/act/Sigmoid), /model.18/m.0/cv1/act/Mul)
+/model.18/m.0/cv2/conv/Conv + PWN(PWN(/model.18/m.0/cv2/act/Sigmoid), /model.18/m.0/cv2/act/Mul)
+Reformatting CopyNode for Output Tensor 0 to /model.18/m.0/cv2/conv/Conv + PWN(PWN(/model.18/m.0/cv2/act/Sigmoid), /model.18/m.0/cv2/act/Mul)
+/model.18/Split_output_0 copy
+/model.18/Split_output_1 copy
+/model.18/cv2/conv/Conv + PWN(PWN(/model.18/cv2/act/Sigmoid), /model.18/cv2/act/Mul)
+Reformatting CopyNode for Output Tensor 0 to /model.18/cv2/conv/Conv + PWN(PWN(/model.18/cv2/act/Sigmoid), /model.18/cv2/act/Mul)
+/model.19/conv/Conv + PWN(PWN(/model.19/act/Sigmoid), /model.19/act/Mul)
+/model.22/cv2.1/cv2.1.0/conv/Conv || /model.22/cv3.1/cv3.1.0/conv/Conv
+PWN(PWN(/model.22/cv2.1/cv2.1.0/act/Sigmoid), /model.22/cv2.1/cv2.1.0/act/Mul)
+PWN(PWN(/model.22/cv3.1/cv3.1.0/act/Sigmoid), /model.22/cv3.1/cv3.1.0/act/Mul)
+/model.9/cv2/act/Mul_output_0 copy
+/model.22/cv2.1/cv2.1.1/conv/Conv + PWN(PWN(/model.22/cv2.1/cv2.1.1/act/Sigmoid), /model.22/cv2.1/cv2.1.1/act/Mul)
+/model.22/cv3.1/cv3.1.1/conv/Conv + PWN(PWN(/model.22/cv3.1/cv3.1.1/act/Sigmoid), /model.22/cv3.1/cv3.1.1/act/Mul)
+/model.21/cv1/conv/Conv
+PWN(PWN(/model.21/cv1/act/Sigmoid), /model.21/cv1/act/Mul)
+/model.22/cv2.1/cv2.1.2/Conv
+/model.22/cv3.1/cv3.1.2/Conv
+Reformatting CopyNode for Input Tensor 0 to /model.22/Reshape_1
+/model.22/Reshape_1
+/model.22/Reshape_1_copy_output
+Reformatting CopyNode for Input Tensor 0 to /model.22/Reshape_4
+/model.22/Reshape_4
+/model.22/Reshape_4_copy_output
+Reformatting CopyNode for Input Tensor 0 to /model.21/m.0/cv1/conv/Conv + PWN(PWN(/model.21/m.0/cv1/act/Sigmoid), /model.21/m.0/cv1/act/Mul)
+/model.21/m.0/cv1/conv/Conv + PWN(PWN(/model.21/m.0/cv1/act/Sigmoid), /model.21/m.0/cv1/act/Mul)
+/model.21/m.0/cv2/conv/Conv + PWN(PWN(/model.21/m.0/cv2/act/Sigmoid), /model.21/m.0/cv2/act/Mul)
+Reformatting CopyNode for Output Tensor 0 to /model.21/m.0/cv2/conv/Conv + PWN(PWN(/model.21/m.0/cv2/act/Sigmoid), /model.21/m.0/cv2/act/Mul)
+/model.21/Split_output_0 copy
+/model.21/Split_output_1 copy
+/model.21/cv2/conv/Conv
+PWN(PWN(/model.21/cv2/act/Sigmoid), /model.21/cv2/act/Mul)
+Reformatting CopyNode for Input Tensor 0 to /model.22/cv2.2/cv2.2.0/conv/Conv || /model.22/cv3.2/cv3.2.0/conv/Conv
+/model.22/cv2.2/cv2.2.0/conv/Conv || /model.22/cv3.2/cv3.2.0/conv/Conv
+PWN(PWN(/model.22/cv2.2/cv2.2.0/act/Sigmoid), /model.22/cv2.2/cv2.2.0/act/Mul)
+PWN(PWN(/model.22/cv3.2/cv3.2.0/act/Sigmoid), /model.22/cv3.2/cv3.2.0/act/Mul)
+/model.22/cv2.2/cv2.2.1/conv/Conv + PWN(PWN(/model.22/cv2.2/cv2.2.1/act/Sigmoid), /model.22/cv2.2/cv2.2.1/act/Mul)
+/model.22/cv3.2/cv3.2.1/conv/Conv + PWN(PWN(/model.22/cv3.2/cv3.2.1/act/Sigmoid), /model.22/cv3.2/cv3.2.1/act/Mul)
+/model.22/cv2.2/cv2.2.2/Conv
+/model.22/cv3.2/cv3.2.2/Conv
+Reformatting CopyNode for Input Tensor 0 to /model.22/Reshape_2
+/model.22/Reshape_2
+/model.22/Reshape_2_copy_output
+Reformatting CopyNode for Input Tensor 0 to /model.22/Reshape_5
+/model.22/Reshape_5
+/model.22/Reshape_5_copy_output
+/model.22/dfl/Reshape + /model.22/dfl/Transpose
+/model.22/dfl/Softmax
+/model.22/dfl/conv/Conv
+/model.22/dfl/Reshape_1
+Reformatting CopyNode for Output Tensor 0 to /model.22/dfl/Reshape_1
+/model.22/Constant_12_output_0
+/model.22/Sub
+/model.22/Constant_13_output_0
+PWN(/model.22/Add_1)
+PWN(/model.22/Constant_14_output_0 + (Unnamed Layer* 293) [Shuffle], PWN(/model.22/Add_2, /model.22/Div_1))
+/model.22/Sub_1
+/model.22/Constant_15_output_0 + (Unnamed Layer* 298) [Shuffle]
+/model.22/Mul_2
+Reformatting CopyNode for Input Tensor 0 to PWN(/model.22/Sigmoid)
+PWN(/model.22/Sigmoid)
+
+Bindings:
+images
+output0
+[10/12/2026-13:49:53] [I] [TRT] The profiling verbosity was set to ProfilingVerbosity::kLAYER_NAMES_ONLY when the engine was built, so only the layer names will be returned. Rebuild the engine with ProfilingVerbosity::kDETAILED to get more verbose layer information.
+[10/12/2026-13:49:53] [I] Skipped inference phase since --buildOnly is added.
+&&&& PASSED TensorRT.trtexec [TensorRT v8502] # /usr/src/tensorrt/bin/trtexec --loadEngine=1012_int8.engine --dumpLayerInfo --profilingVerbosity=detailed --exportLayerInfo=1012_int8_layers.json --buildOnly

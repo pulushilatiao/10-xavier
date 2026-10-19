@@ -1,0 +1,74 @@
+eval_precision_1012TEST.py:210: DeprecationWarning: Use get_tensor_mode instead.
+  if self.engine.binding_is_input(i)
+eval_precision_1012TEST.py:221: DeprecationWarning: Use get_tensor_shape instead.
+  self.engine.get_binding_shape(self.in_id)
+eval_precision_1012TEST.py:237: DeprecationWarning: Use get_tensor_shape instead.
+  self.context.get_binding_shape(self.in_id)
+eval_precision_1012TEST.py:241: DeprecationWarning: Use get_tensor_shape instead.
+  self.context.get_binding_shape(self.out_id)
+eval_precision_1012TEST.py:276: DeprecationWarning: Use get_tensor_dtype instead.
+  self.engine.get_binding_dtype(
+eval_precision_1012TEST.py:284: DeprecationWarning: Use get_tensor_dtype instead.
+  self.engine.get_binding_dtype(
+eval_precision_1012TEST.py:309: DeprecationWarning: Use get_tensor_shape instead.
+  self.context.get_binding_shape(i)
+eval_precision_1012TEST.py:314: DeprecationWarning: Use get_tensor_dtype instead.
+  self.engine.get_binding_dtype(i)
+
+========== ENGINE CHECK ==========
+FP16: 1012_fp16.engine, 7.47 MB
+INT8: 1012_int8.engine, 5.28 MB
+==================================
+
+TensorRT: 8.5.3.1
+OpenCV: 4.5.4-dev
+[DEBUG] Evaluating only 5 images. Do not publish subset AP.
+Validation images: 5
+GT objects: 36
+Expected nc from data.yaml: None
+
+==============================
+Evaluating: FP16
+==============================
+INPUT: (1, 3, 640, 640)
+OUTPUT: (1, 7, 8400)
+CLASSES: 3
+INPUT DTYPE: float32
+OUTPUT DTYPE: float32
+Warmup: 5 iterations
+1/5: IMG_7314.jpg => 300 objects
+2/5: IMG_7317.jpg => 295 objects
+3/5: IMG_7319.jpg => 300 objects
+4/5: IMG_7320.jpg => 300 objects
+5/5: IMG_7328.jpg => 300 objects
+
+==============================
+Evaluating: INT8
+==============================
+INPUT: (1, 3, 640, 640)
+OUTPUT: (1, 7, 8400)
+CLASSES: 3
+INPUT DTYPE: float32
+OUTPUT DTYPE: float32
+Warmup: 5 iterations
+1/5: IMG_7314.jpg => 300 objects
+2/5: IMG_7317.jpg => 298 objects
+3/5: IMG_7319.jpg => 300 objects
+4/5: IMG_7320.jpg => 300 objects
+5/5: IMG_7328.jpg => 300 objects
+
+================================
+FP16 vs INT8 RESULTS
+================================
+METRIC                    FP16       INT8
+mAP50                   0.8036     0.8337
+mAP50_95                0.6337     0.6624
+gpu_ms_mean            22.7604     9.4453
+gpu_ms_p95             25.3235     9.6646
+e2e_ms_mean           339.3071   245.4532
+e2e_fps                 2.9472     4.0741
+mAP50 INT8 loss: -3.011 percentage points
+mAP50_95 INT8 loss: -2.878 percentage points
+Saved: /home/ihpc/Desktop/20261012/precision_DEBUG.json
+NOTE: AP uses independent 101-point interpolation.
+NOTE: GPU and E2E FPS are not trtexec throughput.

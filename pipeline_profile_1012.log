@@ -1,0 +1,86 @@
+Images: 24
+Repeats: 3
+
+============================================================
+PROFILING: FP16
+Engine: /home/ihpc/Desktop/20261012/1012_fp16.engine
+============================================================
+INPUT: (1, 3, 640, 640)
+OUTPUT: (1, 7, 8400)
+CLASSES: 3
+INPUT DTYPE: float32
+OUTPUT DTYPE: float32
+Warmup: 10 iterations
+Repeat 1/3
+PASS: Postprocess matches original
+Repeat 2/3
+Repeat 3/3
+
+STAGE LATENCY (ms)
+Stage                      Mean        P95
+--------------------------------------------
+read_ms                 465.267    535.888
+preprocess_ms            14.274     15.061
+infer_wall_ms            23.421     23.580
+gpu_ms                   21.893     22.030
+decode_ms                 1.863      2.078
+nms_ms                    5.399      8.088
+restore_ms                1.019      1.309
+post_ms                   8.307     11.053
+e2e_ms                  511.311    580.303
+
+BOTTLENECK SHARES
+Image read: 91.0%
+Preprocessing: 2.8%
+Infer wall: 4.6%
+Postprocess: 1.6%
+NMS alone: 1.1%
+
+CANDIDATES
+Mean before NMS: 1052.7
+Mean after NMS: 494.7
+Capped at MAX_DET: 66/72
+End-to-end FPS: 1.956
+
+============================================================
+PROFILING: INT8
+Engine: /home/ihpc/Desktop/20261012/1012_int8.engine
+============================================================
+INPUT: (1, 3, 640, 640)
+OUTPUT: (1, 7, 8400)
+CLASSES: 3
+INPUT DTYPE: float32
+OUTPUT DTYPE: float32
+Warmup: 10 iterations
+Repeat 1/3
+PASS: Postprocess matches original
+Repeat 2/3
+Repeat 3/3
+
+STAGE LATENCY (ms)
+Stage                      Mean        P95
+--------------------------------------------
+read_ms                 412.852    474.305
+preprocess_ms            13.858     15.719
+infer_wall_ms            18.151     21.514
+gpu_ms                   16.609     19.912
+decode_ms                 1.739      1.894
+nms_ms                    3.860      4.916
+restore_ms                0.924      1.011
+post_ms                   6.546      7.654
+e2e_ms                  451.446    515.919
+
+BOTTLENECK SHARES
+Image read: 91.5%
+Preprocessing: 3.1%
+Infer wall: 4.0%
+Postprocess: 1.4%
+NMS alone: 0.9%
+
+CANDIDATES
+Mean before NMS: 913.1
+Mean after NMS: 333.8
+Capped at MAX_DET: 57/72
+End-to-end FPS: 2.215
+
+Saved: /home/ihpc/Desktop/20261012/pipeline_profile_1012.json
